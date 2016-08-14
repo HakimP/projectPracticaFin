@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'usuario/guardarUsuario'
+
+  get 'usuario/consultarUsuario'
+
+  get 'usuario/verUsuarioMenor18'
+
+  post 'usuario/guarda_form'
+
+  post 'usuario/consultaUsuarioPorNombre'
+
+  root 'usuario#guardarUsuario'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
