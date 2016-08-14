@@ -1,0 +1,20 @@
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Nombre</td>
+				<td>Edad</td>
+				<td>Correo Electronico</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% @listUsuarios.each do |usuario| %>
+			<tr>
+				<td><%= usuario.nombre %></td>
+				<td><%= usuario.edad %></td>
+				<td><%= usuario.correo%></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+<div>

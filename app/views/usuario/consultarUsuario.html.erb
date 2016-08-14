@@ -1,0 +1,33 @@
+<div class="container">
+	<p><%= flash[:notice]%></p>
+	<form action="<%= usuario_consultaUsuarioPorNombre_path %>" method="POST" class="form-horizontal">
+		<%= hidden_field_tag :authenticity_token, 
+			form_authenticity_token %>
+		<div class="form-group">
+	    	<label class="control-label col-sm-3">Nombre: </label>
+	    	<div class="col-sm-5">
+	    		<input name="nombreHtml" class="form-control" placeholder="Escribe tu Nombre">
+	    	</div>
+	    	<input type="submit" class="btn btn-success" value="Consultar">
+	    </div>
+    </form>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Nombre</td>
+				<td>Edad</td>
+				<td>Correo Electronico</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% @listUsuarios.each do |usuario| %>
+			<tr>
+				<td><%= usuario.nombre %></td>
+				<td><%= usuario.edad %></td>
+				<td><%= usuario.correo%></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+<div>

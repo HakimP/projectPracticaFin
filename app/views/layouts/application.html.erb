@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<%= render '/comunes/display_partial_menu' %>
+	</div>
+	<%= yield %>
 </body>
 </html>
