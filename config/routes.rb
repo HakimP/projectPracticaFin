@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'educacion/verEducacion'
+
+  get 'educacion/verGuardarEducacion'
+  
+  post 'educacion/guardarEducacion'
+
   get 'usuario/guardarUsuario'
 
   get 'usuario/consultarUsuario'
