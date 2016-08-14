@@ -1,0 +1,18 @@
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Nombre Carrera</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% @listCarreras.each do |carreras| %>
+			<tr>
+				<td><%= carreras.nombreCarrera %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+<div>
+
+<%= link_to 'Crear Nuevo Carrera', educacion_verGuardarEducacion_path, :class => 'btn btn-primary' %>
