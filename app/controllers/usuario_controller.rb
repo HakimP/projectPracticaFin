@@ -1,5 +1,7 @@
 class UsuarioController < ApplicationController
   
+  def index
+  end
   def guardarUsuario
   end
 
