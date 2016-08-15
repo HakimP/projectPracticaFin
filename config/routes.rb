@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'educacion/verEducacion'
 
   get 'educacion/verGuardarEducacion'
-  
+
   post 'educacion/guardarEducacion'
 
   get 'usuario/guardarUsuario'
@@ -11,12 +11,13 @@ Rails.application.routes.draw do
 
   get 'usuario/verUsuarioMenor18'
 
+  get 'usuario/index'
+
   post 'usuario/guarda_form'
 
   post 'usuario/consultaUsuarioPorNombre'
 
-  root 'usuario#guardarUsuario'
-
+  root 'usuario#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
